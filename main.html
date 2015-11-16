@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular-Dropdown</title>
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body ng-app="myApp" ng-controller="myAppCtrl">
+      <h1>Angular DropDown</h1>
+      <h1>{{test}}</h1>
+      <form>
+          <select class="form-control" ng-model="mySelected">
+              <option ng-repeat="x in continent">{{x}}</option>
+          </select>
+
+          <select class='form-control'>
+              <option ng-repeat="y in chooseData(mySelected)">{{y}}</option>
+          </select>
+
+      </form>
+
+  </body>
+</html>
